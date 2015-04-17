@@ -1,7 +1,11 @@
 Church Theme
 ------------
 
+**Note**: This theme is unmaintained.
+
+A light, creamy theme fit for Alanzo Church.
+
+![Church] (./images/church.png)
+
 Requirements: >= emacs 24.x
 License: BSD-3, see LICENSE.txt.
-
-This is an early start to a light-background colored emacs theme.

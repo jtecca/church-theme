@@ -13,16 +13,17 @@
 
 ;; ---------------------------
 ;;
-;; Church: A light color theme based on McCarthy from the sublime-themes package
+;; Church: A creamy light theme fit for Alonzo Church
 ;;
 ;; ----------------------------
 
 (unless (>= 24 emacs-major-version)
   (error "requires Emacs 24 or later."))
 
-(deftheme church "A light theme with colors based on McCarthy.")
+(deftheme church "A creamy light theme fit for Alonzo Church.")
 
-(let ((*background*         "#f6f2f2")
+(let (
+      (*background*         "#f6f2f2")
       (*comments*           "#2c5115")
       (*constant*           "#2c9f20")
       (*current-line*       "#e2e3e2")
@@ -34,7 +35,7 @@
       (*mode-inactive-bg*   "#ccc")
       (*mode-line-fg*       "#EEE")
       (*normal*             "#1b1e2b")
-      (*string*             "#005555")
+      (*string*             "#585858")
       (*number*             "#5b93fc")
       (*operators*          "#75507B")
       (*warning*            "#b22222")
@@ -51,11 +52,6 @@
       (*delim-3*            "#6a6a6a")
       (*delim-4*            "#484848")
       (*delim-5*            "#252525")
-      ;; (*delim-1*            "#8b8b7a")
-      ;; (*delim-2*            "#C14")
-      ;; (*delim-3*            "#3B5998")
-      ;; (*delim-4*            "#2da")
-      ;; (*delim-5*            "#9070ab")
 )
 
   (custom-theme-set-faces
@@ -64,8 +60,6 @@
    `(bold ((t (:bold t))))
    `(button ((t (:foreground, *keywords*))))
    `(link ((t (:foreground, *link* :underline t :weight normal))))
-   ;; below breaks with any string for :foreground keyword
-   ;`(link-visited ((t (:foreground *link-visited* :underline t :weight normal))))
    `(link-visited ((t (:foreground ,*link-visited* :underline t :weight normal))))
    `(default ((t (:background, *background* :foreground, *normal*))))
 
@@ -122,9 +116,11 @@
    `(rainbow-delimiters-depth-3-face ((t (:foreground ,*delim-3*))))
    `(rainbow-delimiters-depth-4-face ((t (:foreground ,*delim-4*))))
    `(rainbow-delimiters-depth-5-face ((t (:foreground ,*delim-5*))))
-))
 
- 
+   ;; sml-modeline
+   `(sml-modeline-end-face ((t (:foreground ,*mode-line-fg*))))
+   `(sml-modeline-vis-face ((t (:foreground ,*mode-line-fg*))))
+))
 
 ;;;
 (when (and (boundp 'custom-theme-load-path) load-file-name)
