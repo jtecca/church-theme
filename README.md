@@ -3,7 +3,7 @@ Church Theme
 
 **Note**: This theme is unmaintained.
 
-A light, creamy theme fit for Alanzo Church.
+A light, creamy theme fit for Alonzo Church.
 
 ![Church] (./images/church.png)
 
